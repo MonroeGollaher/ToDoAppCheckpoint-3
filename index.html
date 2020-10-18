@@ -12,16 +12,33 @@
 </head>
 
 <body>
+
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">taskmaster</span>
-            </a>
-        </nav>
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">To Do App</span>
+          </nav>
     </header>
-    <main>
-        <div id="app"></div>
+
+    <main class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-check-square"></i>
+            </a>
+          </nav>
+        <div class="row">
+            <form class="col-12" onsubmit="app.listController.createList(event)">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Enter ToDo List Name Here">
+                    <button type="submit" name="" id="" class="btn btn-primary btn-lg btn-block">Create</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- App area -->
+        
+        <div class="row" id="app">
+        
+        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
@@ -32,6 +49,8 @@
     </footer>
 
     <script src="app/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </body>
 
 </html>
