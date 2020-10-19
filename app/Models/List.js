@@ -14,12 +14,12 @@ export default class List {
 
     return /*html*/`
     
-          <div class="col-4 shadow-lg rounded">
+          <div class="col-sm-12 col-md-4 shadow-lg rounded py-3 mb-4">
             <h4>${this.title}<button class="text-danger close mt-3" onclick="app.listController.deleteList('${this.id}')"><span>&times;</span></button></h4>
              <div class="add-items">
              <form onsubmit="app.taskController.createTask(event, '${this.id}')">
               <input type="text" class="form-control todo-list-input" name="taskTitle" placeholder="What do you want to add?">
-              <button class="btn btn-primary font-weight-bold" >Add</button> 
+              <button class="btn btn-primary font-weight-bold mt-3" >Add</button> 
              </form>
                 
              </div>

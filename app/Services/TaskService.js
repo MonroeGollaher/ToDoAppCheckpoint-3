@@ -21,13 +21,19 @@ class TaskService {
     }
 
     deleteTask(id){
-        ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+        let x = confirm("Are you sure you want to delete this task?")
+        if(x == true){
+            ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+            Swal.fire(
+                'Deleted!',
+                ' ',
+                'error'
+              )
+        } else {
+            
+        }
         // @ts-ignore
-        Swal.fire(
-          'Deleted!',
-          ' ',
-          'error'
-        )
+        
     }
 
     completeTask(id){

@@ -22,6 +22,7 @@ export default class TaskController {
 
         taskService.createTask(task)
         console.log(task)
+        form.reset()
     }
 
     deleteTask(id){

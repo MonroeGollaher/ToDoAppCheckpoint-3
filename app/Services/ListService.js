@@ -17,10 +17,13 @@ class ListService {
   }
 
   deleteList(id){
+    let x = confirm("Are you sure you want to delete this list?")
+    if(x == true){
+      ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
+      ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
+    } else {
 
-    ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
-    ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
-
+    }
   }
 
   //TODO  Here is where we handle all of our business logic,

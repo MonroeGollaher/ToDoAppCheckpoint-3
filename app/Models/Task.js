@@ -15,8 +15,9 @@ export default class Task {
     
     return /*html*/`
     <div class="row m-1">
-    <div class="1"></div>
-    <div class="col">
+      <div class="1">
+      </div>
+      <div class="col">
     <p class="${this.taskName}" onclick="app.taskController.completeTask('${this.id}')">${this.title} </p>
     </div>
     <div class="col-1">
