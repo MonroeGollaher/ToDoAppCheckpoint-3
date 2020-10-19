@@ -25,7 +25,7 @@ export default class ListController {
     }
 
     listService.createList(listName)
-    form.resest()
+    form.reset()
   }
 
   deleteList(id){

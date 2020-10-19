@@ -21,7 +21,7 @@ export default class Task {
     <p class="${this.taskName}" onclick="app.taskController.completeTask('${this.id}')">${this.title} </p>
     </div>
     <div class="col-1">
-    <button class="text-danger close" onclick="app.taskController.deleteTask('${this.id}')">&times;</button>
+    <button class="text-danger close" onclick="app.taskController.deleteTask('${this.id}')"><i class="fas fa-backspace"></i></button>
     </div>
     </div>
         `
